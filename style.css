@@ -1,0 +1,133 @@
+
+
+/* config geral */
+* {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+
+/* cabeçalho */
+header {
+    padding: 10px 4%;
+    background-color: #495C5E;
+}
+
+header > .interface {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .btn-nav{
+    color: #a0a0a0;
+    display: inline-block;
+    font-size: 20px;
+}
+
+header .btn-nav:hover{
+    color: #FFF;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-download button {
+    background-color: #FDFCD8;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 40px;
+}
+
+header .btn-download button:hover{
+    box-shadow: 0px 0px 8px #fefddf;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+/* section */
+
+
+.section-div{
+    align-items: center;
+    animation: inicializar .7s forwards;
+    background-color: #556A6F;
+    color: #eeebeb;
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.section-div div{
+    align-self: start;
+    display: grid;
+    margin-top: 120px;
+}
+
+.section-div h1{
+    font-size: 40px;
+}
+
+.section-div p{
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+.section-image{
+    max-width: 1000px;
+}
+
+.digitando::after{
+    animation: pisca .5s infinite;
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
